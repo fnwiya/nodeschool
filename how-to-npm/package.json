@@ -1,11 +1,16 @@
 {
   "name": "@fnwiya/how-to-npm",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "test",
+  "registry": "http://registry.npmjs.org/",
+  "test": "test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  }
 }
