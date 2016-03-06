@@ -1,10 +1,12 @@
 var through = require('through2');
-var stream = through(write, end);
 function write(buffer, encoding, next) {
-    this.push('I got some date: ' + buffer +  '\n');
+    var str = buffer.toString();
+    var upStr = str.toUpperCase();
+    this.push(upStr);
     next();
 }
 function end(done) {
     done();
 }
-process.stdin.pipe(tr).pipe(process.stdout);
+var stream = through(write, end);
+process.stdin.pipe(stream).pipe(process.stdout);
